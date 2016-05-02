@@ -20,4 +20,4 @@ VOLUME ["/home/vault/config"]
 EXPOSE 8200
 
 ENTRYPOINT ["/usr/local/bin/vault"]
-CMD ["-config=/home/vault/config"]
+CMD ["server", "-config=/home/vault/config"]
