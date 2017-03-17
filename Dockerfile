@@ -2,8 +2,8 @@ FROM alpine
 
 MAINTAINER Knut Ahlers <knut@luzifer.io>
 
-ENV VAULT_VERSION 0.6.5
-ENV VAULT_HASH c9d414a63e9c4716bc9270d46f0a458f0e9660fd576efb150aede98eec16e23e
+ENV VAULT_VERSION 0.7.0
+ENV VAULT_HASH c6d97220e75335f75bd6f603bb23f1f16fe8e2a9d850ba59599b1a0e4d067aaa
 
 ADD https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip /tmp/vault.zip
 
