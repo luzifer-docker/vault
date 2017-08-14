@@ -1,9 +1,9 @@
 FROM alpine
 
-MAINTAINER Knut Ahlers <knut@luzifer.io>
+LABEL maintainer "Knut Ahlers <knut@luzifer.io>"
 
-ENV VAULT_VERSION 0.7.2
-ENV VAULT_HASH 22575dbb8b375ece395b58650b846761dffbf5a9dc5003669cafbb8731617c39
+ENV VAULT_VERSION=0.8.0 \
+    VAULT_HASH=4a0a6fd53ac6913ae78c719113a18cca0569102ce25cfbf1d9e81bdb3c5c508f
 
 ADD https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip /tmp/vault.zip
 
