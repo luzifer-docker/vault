@@ -2,8 +2,8 @@ FROM alpine
 
 LABEL maintainer "Knut Ahlers <knut@luzifer.io>"
 
-ENV VAULT_VERSION=0.8.0 \
-    VAULT_HASH=4a0a6fd53ac6913ae78c719113a18cca0569102ce25cfbf1d9e81bdb3c5c508f
+ENV VAULT_VERSION=0.8.1 \
+    VAULT_HASH=3c4d70ba71619a43229e65c67830e30e050eab7a81ac6b28325ff707e5914188
 
 ADD https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip /tmp/vault.zip
 
