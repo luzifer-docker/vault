@@ -2,8 +2,8 @@ FROM alpine
 
 LABEL maintainer "Knut Ahlers <knut@luzifer.io>"
 
-ENV VAULT_VERSION 0.9.2
-ENV VAULT_HASH abd9f26b71a693e43b0c55ec80c485f1a87f156e53fbf7e9bbccb1eba217761a
+ENV VAULT_VERSION 0.9.3
+ENV VAULT_HASH 4ba8b9dafb903d20b4c87e8954015a07a6995f53a9650ac02b39e6cae502645e
 
 RUN set -xe \
  && apk --no-cache add curl ca-certificates \
