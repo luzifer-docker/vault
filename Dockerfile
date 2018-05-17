@@ -1,13 +1,14 @@
-FROM alpine
+FROM alpine:latest
 
 LABEL maintainer "Knut Ahlers <knut@luzifer.io>"
 
-ENV VAULT_VERSION 0.10.1
-ENV VAULT_HASH 031e521b4603487126fd353a9557dd22a02304a8a11f843e9914be59a8009c8a
+ENV VAULT_VERSION=0.10.1 \
+    VAULT_HASH=031e521b4603487126fd353a9557dd22a02304a8a11f843e9914be59a8009c8a \
+    HOME=/home/vault
 
 RUN set -xe \
  && apk --no-cache add curl ca-certificates \
- && curl -sSLfo /tmp/vault.zip https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip \
+ && curl -sSLfo /tmp/vault.zip "https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip" \
  && echo "${VAULT_HASH}  /tmp/vault.zip" | sha256sum -c \
  && mkdir -p /opt/vault \
  && unzip /tmp/vault.zip -d /opt/vault && rm /tmp/vault.zip \

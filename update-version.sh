@@ -21,8 +21,8 @@ echo "Testing availability of archive 'vault_${LATEST}_linux_amd64.zip'..."
 curl -sSLIfo /dev/null https://releases.hashicorp.com/vault/${LATEST}/vault_${LATEST}_linux_amd64.zip
 
 echo "Found version ${LATEST}, patching..."
-sed -i "s/ENV VAULT_VERSION .*$/ENV VAULT_VERSION ${LATEST}/" Dockerfile
-sed -i "s/ENV VAULT_HASH .*$/ENV VAULT_HASH ${SHASUM}/" Dockerfile
+sed -i -E "s/VAULT_VERSION=[^ ]*/VAULT_VERSION=${LATEST}/" Dockerfile
+sed -i -E "s/VAULT_HASH=[^ ]*/VAULT_HASH=${SHASUM}/" Dockerfile
 
 echo "Checking for changes..."
 git diff --exit-code && exit 0
