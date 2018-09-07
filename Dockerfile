@@ -2,8 +2,8 @@ FROM alpine:3.7
 
 LABEL maintainer "Knut Ahlers <knut@luzifer.io>"
 
-ENV VAULT_VERSION=0.11.0 \
-    VAULT_HASH=1681579a5a158a76e37de2854307d649b75ceddd663e71580df25baae036c267 \
+ENV VAULT_VERSION=0.11.1 \
+    VAULT_HASH=eb8d2461d0ca249c1f91005f878795998bdeafccfde0b9bae82343541ce65996 \
     HOME=/home/vault
 
 RUN set -xe \
