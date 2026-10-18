@@ -1,6 +1,6 @@
 FROM alpine:3.24.2@sha256:294b683cb724975bec92580e1e685676bd4b50bda910ddb8c51d4cabeaec77e6
 
-ARG VAULT_VERSION=2.1.2 # renovate: packageName=hashicorp/vault datasource=github-releases
+ARG VAULT_VERSION=2.2.0 # renovate: packageName=hashicorp/vault datasource=github-releases
 
 LABEL maintainer="Knut Ahlers <knut@luzifer.io>"
 
